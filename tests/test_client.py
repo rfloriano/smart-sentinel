@@ -13,7 +13,7 @@ import mock
 import redis
 from preggy import expect
 
-from smart_sentinel import SmartSentinel
+from smart_sentinel.client import SmartSentinel
 from tests.base import TestCase
 
 

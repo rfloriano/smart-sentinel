@@ -10,7 +10,7 @@
 
 from unittest import TestCase as PythonTestCase
 
-from smart_sentinel import SmartSentinel
+from smart_sentinel.client import SmartSentinel
 
 
 class TestCase(PythonTestCase):

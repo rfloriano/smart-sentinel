@@ -9,4 +9,3 @@
 # Copyright (c) 2016, Rafael Floriano da Silva <rflorianobr@gmail.com>
 
 from smart_sentinel.version import __version__  # NOQA
-from smart_sentinel.client import SmartSentinel  # NOQA
