@@ -157,6 +157,7 @@ class SmartSentinel(object):
             'script_load',
             'register_script',
             'geoadd',
+            'pipeline',
         ]
 
     # def _get_read_operations(self):
