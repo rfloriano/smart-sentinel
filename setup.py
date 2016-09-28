@@ -51,7 +51,7 @@ an incredible python package
     packages=find_packages(),
     include_package_data=False,
     install_requires=[
-        'redis>=2.10,<2.11',
+        'redis',
     ],
     extras_require={
         'tests': tests_require,
