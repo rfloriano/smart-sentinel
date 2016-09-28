@@ -56,7 +56,6 @@ class ClientTestCase(TestCase):
             'some conn error'
         )
         mocked_get_slave().get = mock.Mock()
-        value = str(uuid.uuid4())
-        self.client.get('testing', value)
+        self.client.get('testing')
         mocked_get_slave.assert_any_call()
         mocked_get_slave().get.assert_called_once()
