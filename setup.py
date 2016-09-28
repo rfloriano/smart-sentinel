@@ -22,6 +22,7 @@ tests_require = [
     'ipdb',
     'coveralls',
     'sphinx',
+    'tornado',
 ]
 
 setup(

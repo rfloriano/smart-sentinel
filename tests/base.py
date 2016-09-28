@@ -10,6 +10,9 @@
 
 from unittest import TestCase as PythonTestCase
 
+import tornado.web
+from tornado.testing import AsyncHTTPTestCase
+
 from smart_sentinel.client import SmartSentinel
 
 
@@ -32,7 +35,15 @@ class TestCase(PythonTestCase):
         return 'master2'
 
     def get_client_args(self):
-        return ([('127.0.0.1', 57574), ('127.0.0.1', 57573)],)
+        return ([('localhost', 57574), ('localhost', 57573)],)
 
     def get_client_kwargs(self):
         return {}
+
+
+class TornadoTestCase(AsyncHTTPTestCase, TestCase):
+    def get_handlers(self):
+        return []
+
+    def get_app(self):
+        return tornado.web.Application(self.get_handlers())
